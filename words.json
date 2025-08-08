@@ -1,0 +1,514 @@
+{
+  "Voertuigen": [
+    {
+      "word": "auto",
+      "difficulty": "makkelijk",
+      "image": "images/auto.png",
+      "caption": "auto"
+    },
+    {
+      "word": "fiets",
+      "difficulty": "makkelijk",
+      "image": "images/fiets.png",
+      "caption": "fiets"
+    },
+    {
+      "word": "vliegtuig",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "helikopter",
+      "difficulty": "normaal",
+      "image": "images/helikopter.png",
+      "caption": "helikopter"
+    },
+    {
+      "word": "trein",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "boot",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "raceauto",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "bus",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "raket",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "tractor",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "kraanwagen",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "onderzeeër",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "motor",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "luchtballon",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "ruimteschip",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "brandweerwagen",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "ambulance",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "politieauto",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "skelter",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "step",
+      "difficulty": "makkelijk"
+    }
+  ],
+  "Gebouwen": [
+    {
+      "word": "huis",
+      "difficulty": "makkelijk",
+      "image": "images/huis.png",
+      "caption": "huis"
+    },
+    {
+      "word": "flat",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "kasteel",
+      "difficulty": "normaal",
+      "image": "images/kasteel.png",
+      "caption": "kasteel"
+    },
+    {
+      "word": "brug",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "toren",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "school",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "ziekenhuis",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "stadion",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "molen",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "kerk",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "pretpark",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "luchthaven",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "station",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "winkel",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "restaurant",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "bibliotheek",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "museum",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "schuur",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "iglo",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "zandkasteel",
+      "difficulty": "makkelijk"
+    }
+  ],
+  "Dieren & Natuur": [
+    {
+      "word": "hond",
+      "difficulty": "makkelijk",
+      "image": "images/hond.png",
+      "caption": "hond"
+    },
+    {
+      "word": "kat",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "vogel",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "vis",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "olifant",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "giraf",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "dinosaurus",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "haai",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "pinguïn",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "paard",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "boom",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "bloem",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "berg",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "waterval",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "spin",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "kikker",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "slang",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "walvis",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "vlinder",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "leeuw",
+      "difficulty": "normaal"
+    }
+  ],
+  "Eten & Drinken": [
+    {
+      "word": "pizza",
+      "difficulty": "makkelijk",
+      "image": "images/pizza.png",
+      "caption": "pizza"
+    },
+    {
+      "word": "hamburger",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "ijsje",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "brood",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "taart",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "appel",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "banaan",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "wortel",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "friet",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "hotdog",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "watermeloen",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "pannenkoek",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "sushi",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "kaas",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "druiven",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "kopje koffie",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "theepot",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "limonade",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "donut",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "chocoladereep",
+      "difficulty": "makkelijk"
+    }
+  ],
+  "Objecten": [
+    {
+      "word": "stoel",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "tafel",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "lamp",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "boek",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "camera",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "telefoon",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "gitaar",
+      "difficulty": "normaal",
+      "image": "images/gitaar.png",
+      "caption": "gitaar"
+    },
+    {
+      "word": "robot",
+      "difficulty": "moeilijk",
+      "image": "images/robot.png",
+      "caption": "robot"
+    },
+    {
+      "word": "zwaard",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "sleutel",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "paraplu",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "bril",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "horloge",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "skateboard",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "vlieger",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "computer",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "microfoon",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "televisie",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "vlag",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "schommel",
+      "difficulty": "normaal"
+    }
+  ],
+  "Acties & Thema’s": [
+    {
+      "word": "racebaan",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "piratenschip",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "schattenjacht",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "ruimtebasis",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "boerderij",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "zwembad",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "brandweerpost",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "dierentuin",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "concert",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "voetbalwedstrijd",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "camping",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "speeltuin",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "kerstboom",
+      "difficulty": "makkelijk",
+      "image": "images/kerstboom.png",
+      "caption": "kerstboom"
+    },
+    {
+      "word": "strand",
+      "difficulty": "makkelijk"
+    },
+    {
+      "word": "treinstation",
+      "difficulty": "normaal"
+    },
+    {
+      "word": "hulprobot",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "vuurwerk",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "pretpark-attractie",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "laboratorium",
+      "difficulty": "moeilijk"
+    },
+    {
+      "word": "markt",
+      "difficulty": "normaal"
+    }
+  ]
+}

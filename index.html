@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lego Bouwspel — Woorden Generator</title>
+  <meta name="theme-color" content="#ffd60a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Toon willekeurige woorden per categorie om met Lego na te bouwen — nu met plaatjes en moeilijkheidskeuze.">
+</head>
+<body>
+  <header>
+    <h1>🧱 Lego Bouwspel</h1>
+    <button id="btnSettings" title="Instellingen" aria-label="Instellingen">⚙️</button>
+  </header>
+
+  <main>
+    <section id="controls">
+      <div class="row">
+        <label for="category">Categorie:</label>
+        <select id="category" aria-label="Categorie"></select>
+      </div>
+
+      <div class="row">
+        <label for="difficulty">Moeilijkheid (filter):</label>
+        <select id="difficulty" aria-label="Moeilijkheid">
+          <option value="alle">Alle</option>
+          <option value="makkelijk">Makkelijk</option>
+          <option value="normaal">Normaal</option>
+          <option value="moeilijk">Moeilijk</option>
+        </select>
+        <span class="hint">Of kies direct hieronder per ronde:</span>
+      </div>
+
+      <div class="row">
+        <button class="pill" data-diff="makkelijk">Makkelijk</button>
+        <button class="pill" data-diff="normaal">Normaal</button>
+        <button class="pill" data-diff="moeilijk">Moeilijk</button>
+      </div>
+
+      <div class="row">
+        <label for="timerSelect">Timer:</label>
+        <select id="timerSelect" aria-label="Timer">
+          <option value="0">Geen</option>
+          <option value="60">1:00</option>
+          <option value="90">1:30</option>
+          <option value="120">2:00</option>
+          <option value="180">3:00</option>
+          <option value="300">5:00</option>
+        </select>
+        <button id="btnStartTimer">▶︎ Start</button>
+        <button id="btnPauseTimer">⏸︎ Pauze</button>
+        <button id="btnResetTimer">⟲ Reset</button>
+        <span id="timeDisplay" aria-live="polite">—:—</span>
+      </div>
+
+      <div class="row">
+        <button id="btnNewWord" class="cta">🎲 Geef mij een woord</button>
+        <button id="btnReveal" class="secondary">👁 Toon / Verberg</button>
+        <button id="btnSkip" class="secondary">⏭︎ Sla over</button>
+      </div>
+    </section>
+
+    <section id="wordPanel" class="hidden" aria-live="polite">
+      <figure id="imageWrap" class="hidden">
+        <img id="wordImage" alt="" />
+        <figcaption id="imgCaption" class="muted"></figcaption>
+      </figure>
+      <div id="wordText">—</div>
+      <div id="hintText"></div>
+      <div id="meta"></div>
+    </section>
+
+    <section id="history">
+      <h2>Gebruikte woorden</h2>
+      <div id="usedList" class="chips"></div>
+      <button id="btnResetCycle" class="linklike">Reset cyclus (opnieuw beginnen)</button>
+    </section>
+  </main>
+
+  <dialog id="settingsDialog">
+    <form method="dialog">
+      <h2>Instellingen</h2>
+
+      <details open>
+        <summary>Actieve categorieën</summary>
+        <div id="categoryList"></div>
+        <p class="hint">Schakel categorieën in/uit voor de willekeurige selectie.</p>
+      </details>
+
+      <details>
+        <summary>Weergave</summary>
+        <label class="row">
+          <input type="checkbox" id="toggleImages" checked>
+          <span>Plaatjes tonen (als beschikbaar)</span>
+        </label>
+      </details>
+
+      <details>
+        <summary>Eigen woorden</summary>
+        <p>Voeg je eigen categorie met woorden toe. Eén woord per regel.</p>
+        <label>
+          Naam categorie
+          <input id="customCatName" placeholder="Bijv. Theater, School, Familie">
+        </label>
+        <label>
+          Woorden (één per regel)
+          <textarea id="customWords" rows="6" placeholder="bijv. spot, coulisse, souffleuse, decor, foyer"></textarea>
+        </label>
+        <div class="row">
+          <label for="customDifficulty">Moeilijkheid (standaard):</label>
+          <select id="customDifficulty">
+            <option value="makkelijk">Makkelijk</option>
+            <option value="normaal" selected>Normaal</option>
+            <option value="moeilijk">Moeilijk</option>
+          </select>
+        </div>
+        <div class="row">
+          <button id="btnSaveCustom" value="default">+ Opslaan als nieuwe categorie</button>
+          <button id="btnClearCustom" class="danger">Verwijder eigen categorie</button>
+        </div>
+        <p class="hint">Afbeeldingen toevoegen? Zet PNG/JPG in <code>/images</code> en verwijs ernaar in je woordenlijst of voeg later via code toe.</p>
+      </details>
+
+      <menu>
+        <button value="cancel">Sluiten</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <audio id="beep" preload="auto">
+    <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABYAAAACAAACAAAA" type="audio/wav">
+  </audio>
+
+  <footer>
+    <small>Gemaakt voor iPad · Werkt offline · Voeg toe aan beginscherm voor fullscreen</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

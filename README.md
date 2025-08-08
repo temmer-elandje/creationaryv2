@@ -1,19 +1,23 @@
-# Lego Bouwspel — v2 (met plaatjes & snelle moeilijkheid)
+# Lego Bouwspel — v3 (Startscherm met niveaus & punten)
 
-Nieuw in v2:
-- **Plaatjes per woord** (optioneel): toon een afbeelding als `image`-pad in `words.json` is gezet.
-- **Snelle moeilijkheid**: druk op **Makkelijk / Normaal / Moeilijk** om direct een woord van die moeilijkheid te trekken (ongeacht de filter).
-- Filter met dropdown blijft werken voor vaste voorkeuren.
+**Nieuw:** Startscherm met drie keuzes:
+- **1×1-steen** (Makkelijk, 1 punt)
+- **2×2-steen** (Normaal, 2 punten)
+- **Meesterbouwer** (Moeilijk, 3 punten)
+
+Na de keuze ga je naar het opdrachtenscherm. Je ziet de punten-tag van de ronde rechtsboven.
+Verder: afbeeldingen, timer, categorieën en custom woorden blijven werken.
+
+## Gebruik
+1. Open de app (GitHub Pages / lokale server).
+2. Kies je bouw-niveau op het startscherm.
+3. Bouw de opdracht! Nieuwe opdracht (zelfde niveau) via de knop.
+4. Terug naar het startscherm met **Terug**.
 
 ## Afbeeldingen toevoegen
-1. Zet je PNG/JPG in de map **/images**.
-2. In `words.json` voeg je per item `"image": "images/bestand.png"` toe (en optioneel `"caption": "Bijschrift"`).
-3. De app toont het plaatje als *Plaatjes tonen* aan staat (Instellingen).
+Zet PNG/JPG in **/images** en verwijs ernaar in `words.json` bij het item:
+```json
+{ "word": "auto", "difficulty": "makkelijk", "image": "images/auto.png" }
+```
 
-> Tip: In deze versie staan al **voorbeeldafbeeldingen** voor o.a. auto, fiets, helikopter, huis, kasteel, hond, pizza, gitaar, robot, kerstboom (placeholder-kaarten). Vervang ze gerust door echte afbeeldingen.
-
-## Deploy
-- Zelfde als v1: upload alle bestanden in de root van je GitHub repo en zet GitHub Pages aan.
-- Op iPad: open de URL → Deel → Zet op beginscherm.
-
-Veel bouwplezier! 🧱
+Veel plezier! 🧱

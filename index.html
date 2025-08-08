@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lego Bouwspel — Woorden Generator</title>
+  <title>Lego Bouwspel — Start</title>
   <meta name="theme-color" content="#ffd60a">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <link rel="stylesheet" href="styles.css">
-  <meta name="description" content="Toon willekeurige woorden per categorie om met Lego na te bouwen — nu met plaatjes en moeilijkheidskeuze.">
+  <meta name="description" content="Kies je bouw-niveau en krijg een opdracht om met Lego na te bouwen.">
 </head>
 <body>
   <header>
@@ -17,66 +17,81 @@
   </header>
 
   <main>
-    <section id="controls">
-      <div class="row">
+    <!-- START SCREEN -->
+    <section id="screenStart" class="screen">
+      <h2>Kies je bouw-niveau</h2>
+      <p class="muted">Elke keuze levert punten op. Hoe groter de uitdaging, hoe meer punten.</p>
+      <div id="levels" class="levels">
+        <button class="level card" data-diff="makkelijk" data-points="1">
+          <div class="emoji">🧊</div>
+          <div class="title">1×1-steen</div>
+          <div class="subtitle">Makkelijk · 1 punt</div>
+        </button>
+        <button class="level card" data-diff="normaal" data-points="2">
+          <div class="emoji">🧱</div>
+          <div class="title">2×2-steen</div>
+          <div class="subtitle">Normaal · 2 punten</div>
+        </button>
+        <button class="level card" data-diff="moeilijk" data-points="3">
+          <div class="emoji">🏗️</div>
+          <div class="title">Meesterbouwer</div>
+          <div class="subtitle">Moeilijk · 3 punten</div>
+        </button>
+      </div>
+
+      <div class="row start-controls">
         <label for="category">Categorie:</label>
         <select id="category" aria-label="Categorie"></select>
-      </div>
-
-      <div class="row">
-        <label for="difficulty">Moeilijkheid (filter):</label>
-        <select id="difficulty" aria-label="Moeilijkheid">
-          <option value="alle">Alle</option>
-          <option value="makkelijk">Makkelijk</option>
-          <option value="normaal">Normaal</option>
-          <option value="moeilijk">Moeilijk</option>
-        </select>
-        <span class="hint">Of kies direct hieronder per ronde:</span>
-      </div>
-
-      <div class="row">
-        <button class="pill" data-diff="makkelijk">Makkelijk</button>
-        <button class="pill" data-diff="normaal">Normaal</button>
-        <button class="pill" data-diff="moeilijk">Moeilijk</button>
-      </div>
-
-      <div class="row">
-        <label for="timerSelect">Timer:</label>
-        <select id="timerSelect" aria-label="Timer">
-          <option value="0">Geen</option>
-          <option value="60">1:00</option>
-          <option value="90">1:30</option>
-          <option value="120">2:00</option>
-          <option value="180">3:00</option>
-          <option value="300">5:00</option>
-        </select>
-        <button id="btnStartTimer">▶︎ Start</button>
-        <button id="btnPauseTimer">⏸︎ Pauze</button>
-        <button id="btnResetTimer">⟲ Reset</button>
-        <span id="timeDisplay" aria-live="polite">—:—</span>
-      </div>
-
-      <div class="row">
-        <button id="btnNewWord" class="cta">🎲 Geef mij een woord</button>
-        <button id="btnReveal" class="secondary">👁 Toon / Verberg</button>
-        <button id="btnSkip" class="secondary">⏭︎ Sla over</button>
+        <span class="hint">Tip: zet extra categorieën aan/uit via ⚙️ Instellingen</span>
       </div>
     </section>
 
-    <section id="wordPanel" class="hidden" aria-live="polite">
-      <figure id="imageWrap" class="hidden">
-        <img id="wordImage" alt="" />
-        <figcaption id="imgCaption" class="muted"></figcaption>
-      </figure>
-      <div id="wordText">—</div>
-      <div id="hintText"></div>
-      <div id="meta"></div>
-    </section>
+    <!-- WORD SCREEN -->
+    <section id="screenWord" class="screen hidden">
+      <div class="toolbar">
+        <button id="btnBack" class="secondary">⬅︎ Terug</button>
+        <div class="pointsTag" id="pointsTag">0 pt</div>
+      </div>
 
-    <section id="history">
-      <h2>Gebruikte woorden</h2>
-      <div id="usedList" class="chips"></div>
-      <button id="btnResetCycle" class="linklike">Reset cyclus (opnieuw beginnen)</button>
+      <section id="controls">
+        <div class="row">
+          <label for="timerSelect">Timer:</label>
+          <select id="timerSelect" aria-label="Timer">
+            <option value="0">Geen</option>
+            <option value="60">1:00</option>
+            <option value="90">1:30</option>
+            <option value="120">2:00</option>
+            <option value="180">3:00</option>
+            <option value="300">5:00</option>
+          </select>
+          <button id="btnStartTimer">▶︎ Start</button>
+          <button id="btnPauseTimer">⏸︎ Pauze</button>
+          <button id="btnResetTimer">⟲ Reset</button>
+          <span id="timeDisplay" aria-live="polite">—:—</span>
+        </div>
+
+        <div class="row">
+          <button id="btnNewWord" class="cta">🔁 Nieuwe opdracht (zelfde niveau)</button>
+          <button id="btnReveal" class="secondary">👁 Toon / Verberg</button>
+          <button id="btnSkip" class="secondary">⏭︎ Sla over</button>
+        </div>
+      </section>
+
+      <section id="wordPanel" class="hidden" aria-live="polite">
+        <figure id="imageWrap" class="hidden">
+          <img id="wordImage" alt="" />
+          <figcaption id="imgCaption" class="muted"></figcaption>
+        </figure>
+        <div id="wordText">—</div>
+        <div id="hintText"></div>
+        <div id="meta"></div>
+      </section>
+
+      <section id="history">
+        <h2>Gebruikte woorden</h2>
+        <div id="usedList" class="chips"></div>
+        <button id="btnResetCycle" class="linklike">Reset cyclus (opnieuw beginnen)</button>
+      </section>
     </section>
   </main>
 
@@ -121,7 +136,7 @@
           <button id="btnSaveCustom" value="default">+ Opslaan als nieuwe categorie</button>
           <button id="btnClearCustom" class="danger">Verwijder eigen categorie</button>
         </div>
-        <p class="hint">Afbeeldingen toevoegen? Zet PNG/JPG in <code>/images</code> en verwijs ernaar in je woordenlijst of voeg later via code toe.</p>
+        <p class="hint">Afbeeldingen toevoegen? Zet PNG/JPG in <code>/images</code> en verwijs ernaar in je woordenlijst.</p>
       </details>
 
       <menu>

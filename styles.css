@@ -34,7 +34,25 @@ header {
 h1 { font-size: 1.2rem; margin: 0; }
 #btnSettings { font-size: 1.2rem; background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; }
 
-main { padding: 16px; max-width: 900px; margin: 0 auto; width: 100%; }
+main { padding: 16px; max-width: 960px; margin: 0 auto; width: 100%; }
+
+.screen.hidden { display: none; }
+.muted { color: var(--muted); }
+
+.levels { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 12px; }
+.card {
+  background: #14181c;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.card .emoji { font-size: 2rem; }
+.card .title { font-size: 1.2rem; font-weight: 800; margin-top: 8px; }
+.card .subtitle { color: var(--muted); margin-top: 4px; }
+
+.start-controls { margin-top: 16px; }
 
 #controls .row { display: flex; align-items: center; gap: 8px; margin: 10px 0; flex-wrap: wrap; }
 label { color: var(--muted); }
@@ -46,7 +64,6 @@ select, input, textarea, button {
   background: #1f2327;
   color: var(--text);
 }
-textarea { width: 100%; resize: vertical; }
 button { cursor: pointer; }
 button.cta {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
@@ -66,12 +83,6 @@ button.danger {
   background: transparent;
   border: 1px solid var(--danger);
   color: var(--danger);
-}
-button.pill {
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: #21262c;
-  padding: 8px 14px;
 }
 
 #wordPanel {
@@ -124,6 +135,14 @@ button.pill {
   font-size: 0.9rem;
 }
 
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 8px 0 4px; }
+.pointsTag {
+  border: 1px solid var(--border);
+  background: #21262c;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+}
 dialog {
   border: 1px solid var(--border);
   border-radius: 16px;
